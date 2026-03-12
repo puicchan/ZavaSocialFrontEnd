@@ -1,0 +1,70 @@
+# =============================================================================
+# Zava Social Frontend — Docker Compose
+# =============================================================================
+# Runs the Java JSP frontend for Zava Social.
+# This is the frontend half of the Zava Social demo.
+# The worker service is built from the ZavaSocialWorker repo (../ZavaSocialWorker).
+#
+# PREREQUISITE: The backend must be running first.
+#   Start ZavaSocialBackEnd with: docker-compose up --build
+#   The backend creates the 'zava-network' Docker network that this
+#   frontend joins.
+#
+# Usage:
+#   docker-compose up --build
+#
+# If the backend is running natively (not in Docker), override the URL:
+#   ZAVA_SERVICE_URL=http://host.docker.internal:8081/ZavaService.asmx docker-compose up --build
+# =============================================================================
+
+services:
+  zava-web:
+    build:
+      context: ./zava-web
+      dockerfile: Dockerfile
+    container_name: zava-web
+    ports:
+      - "8080:8080"
+    environment:
+      ZAVA_SERVICE_URL: "${ZAVA_SERVICE_URL:-http://zava-service:8081/ZavaService.asmx}"
+      ZAVA_MQ_HOST: rabbitmq
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    healthcheck:
+      test: curl -sf http://localhost:8080/ || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: zava-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  zava-worker:
+    build:
+      context: ../ZavaSocialWorker/zava-worker
+      dockerfile: Dockerfile
+    container_name: zava-worker
+    environment:
+      ZAVA_SERVICE_URL: "${ZAVA_SERVICE_URL:-http://zava-service:8081/ZavaService.asmx}"
+      ZAVA_MQ_HOST: rabbitmq
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    restart: on-failure
+
+networks:
+  default:
+    name: zava-network
+    driver: bridge

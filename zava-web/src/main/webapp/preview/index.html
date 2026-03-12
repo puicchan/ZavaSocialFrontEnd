@@ -1,0 +1,589 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>ZAVA SOCIAL - Trending Kicks</title>
+    <style type="text/css">
+/* ============================================================
+   ZAVA SOCIAL — Main Stylesheet
+   Zava Social Community Platform
+   Last updated: 2007
+   Designer: Parker
+   
+   NOTE: This stylesheet is CSS 2.1 compliant.
+   Layout is handled by HTML tables, not CSS.
+   This file handles colors, fonts, spacing, and borders only.
+   ============================================================ */
+
+
+/* --- RESET / BASE --- */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #333333;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+a:link {
+    color: #0033CC;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #660099;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #FF0000;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #CC0000;
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: 0;
+}
+
+
+/* --- CONTAINER --- */
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border-left: 1px solid #333333;
+    border-right: 1px solid #333333;
+}
+
+
+/* --- HEADER --- */
+
+.header {
+    background-color: #000000;
+    padding: 15px;
+    border-bottom: 2px solid #CC0000;
+    color: #FFFFFF;
+}
+
+.headerTitle {
+    font-family: Impact, 'Arial Black', Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.headerTagline {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    color: #999999;
+    font-style: italic;
+}
+
+
+/* --- NAVIGATION --- */
+
+.nav {
+    background-color: #333333;
+    padding: 8px 15px;
+    color: #FFFFFF;
+}
+
+.navLink {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navLink:link {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.navLink:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.navLink:hover {
+    color: #CC0000;
+    text-decoration: none;
+}
+
+.navLink:active {
+    color: #CC0000;
+    text-decoration: none;
+}
+
+.navActive {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #CC0000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navSeparator {
+    color: #999999;
+    font-size: 11px;
+}
+
+.navUser {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    color: #999999;
+}
+
+
+/* --- CONTENT AREA --- */
+
+.content {
+    background-color: #FFFFFF;
+    padding: 20px 25px;
+    color: #333333;
+}
+
+.pageTitle {
+    font-family: 'Arial Black', Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.sectionTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+/* --- DATA TABLES (feed, posts, reviews list) --- */
+
+.dataTable {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #CCCCCC;
+    margin-bottom: 15px;
+}
+
+.dataTable td,
+.dataTable th {
+    padding: 6px 10px;
+    border: 1px solid #CCCCCC;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 11px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.dataTable th {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.dataHeader {
+    background-color: #000000;
+}
+
+.dataHeader td,
+.dataHeader th {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.dataRowAlt {
+    background-color: #F0F0F0;
+}
+
+
+/* --- SHOE CARD (detail page) --- */
+
+.shoeCard {
+    border: 1px solid #CCCCCC;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #FFFFFF;
+}
+
+.shoeImage {
+    border: 2px solid #000000;
+    margin: 5px;
+}
+
+
+/* --- REVIEW BOX --- */
+
+.reviewBox {
+    border: 1px solid #CCCCCC;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #FFFFFF;
+}
+
+.reviewStars {
+    color: #FFCC00;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.reviewMeta {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    color: #999999;
+}
+
+
+/* --- FORMS --- */
+
+.formTable {
+    border: 1px solid #CCCCCC;
+    padding: 10px;
+    background-color: #FFFFFF;
+}
+
+.formTable td {
+    padding: 5px 8px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 11px;
+    vertical-align: top;
+}
+
+.formLabel {
+    text-align: right;
+    font-weight: bold;
+    color: #333333;
+    white-space: nowrap;
+}
+
+.formInput {
+    text-align: left;
+}
+
+.formInput input,
+.formInput textarea {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 11px;
+    border: 1px solid #999999;
+    padding: 4px;
+    background-color: #FFFFFF;
+}
+
+.formInput select {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 11px;
+}
+
+.formButton {
+    background-color: #CC0000;
+    color: #FFFFFF;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid #990000;
+    padding: 6px 15px;
+    cursor: pointer;
+}
+
+.loginForm {
+    width: 400px;
+    margin: 20px auto;
+    border: 1px solid #CCCCCC;
+    padding: 15px;
+    background-color: #FFFFFF;
+}
+
+.loginForm td {
+    padding: 5px 8px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 11px;
+    vertical-align: top;
+}
+
+
+/* --- BADGES & HIGHLIGHTS --- */
+
+.newBadge {
+    color: #FFCC00;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.required {
+    color: #CC0000;
+    font-weight: bold;
+}
+
+
+/* --- MESSAGES --- */
+
+.errorMsg {
+    color: #CC0000;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #CC0000;
+    background-color: #FFFFFF;
+}
+
+.successMsg {
+    color: #006600;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #006600;
+    background-color: #FFFFFF;
+}
+
+
+/* --- METADATA / MISC --- */
+
+.metaText {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    color: #999999;
+}
+
+.pagination {
+    text-align: center;
+    padding: 10px 0;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 11px;
+}
+
+
+/* --- FOOTER --- */
+
+.footer {
+    background-color: #000000;
+    padding: 15px;
+    color: #999999;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    border-top: 1px solid #333333;
+}
+
+.footerLink {
+    color: #999999;
+    text-decoration: none;
+}
+
+.footerLink:link {
+    color: #999999;
+    text-decoration: none;
+}
+
+.footerLink:visited {
+    color: #999999;
+    text-decoration: none;
+}
+
+.footerLink:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.footerLink:active {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+
+/* --- BROWSER NOTE (footer) --- */
+
+.browserNote {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 9px;
+    color: #666666;
+    margin-top: 8px;
+}
+    </style>
+</head>
+<body>
+
+<table class="container" width="800" cellpadding="0" cellspacing="0" border="0" align="center">
+
+    <!-- HEADER -->
+    <tr>
+        <td class="header">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td align="left" valign="middle">
+                        <span class="headerTitle">ZAVA SOCIAL</span>
+                    </td>
+                    <td align="right" valign="bottom">
+                        <span class="headerTagline">kicks. culture. community.</span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <!-- NAV -->
+    <tr>
+        <td class="nav">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td align="left">
+                        <a href="index.html" class="navActive">HOME</a>
+                        <span class="navSeparator"> | </span>
+                        <a href="post.html" class="navLink">POST A SHOE</a>
+                        <span class="navSeparator"> | </span>
+                        <a href="detail.html" class="navLink">REVIEWS</a>
+                        <span class="navSeparator"> | </span>
+                        <a href="profile.html" class="navLink">MY PROFILE</a>
+                        <span class="navSeparator"> | </span>
+                        <a href="login.html" class="navLink">LOGOUT</a>
+                    </td>
+                    <td align="right">
+                        <span class="navUser">Welcome back, kickz_fan99!</span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <!-- CONTENT -->
+    <tr>
+        <td class="content">
+
+            <h1 class="pageTitle">TRENDING KICKS</h1>
+
+            <table class="dataTable" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr class="dataHeader">
+                    <th>&nbsp;</th>
+                    <th>Shoe</th>
+                    <th>Brand</th>
+                    <th>Posted By</th>
+                    <th>Likes</th>
+                    <th>Date</th>
+                </tr>
+                <tr>
+                    <td><span class="newBadge">NEW!</span></td>
+                    <td><b><a href="detail.html">Air Jordan 4 Retro Lightning</a></b></td>
+                    <td>Nike</td>
+                    <td><a href="profile.html">grailhunter</a></td>
+                    <td align="center">67</td>
+                    <td><span class="metaText">01/18/2007</span></td>
+                </tr>
+                <tr class="dataRowAlt">
+                    <td><span class="newBadge">NEW!</span></td>
+                    <td><b><a href="detail.html">2002R Protection Pack</a></b></td>
+                    <td>New Balance</td>
+                    <td><a href="profile.html">freshout_thebox</a></td>
+                    <td align="center">31</td>
+                    <td><span class="metaText">01/17/2007</span></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><b><a href="detail.html">Chuck 70 Hi Canvas</a></b></td>
+                    <td>Converse</td>
+                    <td><a href="profile.html">solequeen</a></td>
+                    <td align="center">24</td>
+                    <td><span class="metaText">01/16/2007</span></td>
+                </tr>
+                <tr class="dataRowAlt">
+                    <td>&nbsp;</td>
+                    <td><b><a href="detail.html">Suede Classic</a></b></td>
+                    <td>Puma</td>
+                    <td><a href="profile.html">kickflipkid</a></td>
+                    <td align="center">19</td>
+                    <td><span class="metaText">01/15/2007</span></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><b><a href="detail.html">Blazer Mid '77 Vintage</a></b></td>
+                    <td>Nike</td>
+                    <td><a href="profile.html">hi_top_hana</a></td>
+                    <td align="center">38</td>
+                    <td><span class="metaText">01/14/2007</span></td>
+                </tr>
+                <tr class="dataRowAlt">
+                    <td>&nbsp;</td>
+                    <td><b><a href="detail.html">Air Monarch IV</a></b></td>
+                    <td>Nike</td>
+                    <td><a href="profile.html">lacedup_lou</a></td>
+                    <td align="center">42</td>
+                    <td><span class="metaText">01/13/2007</span></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><b><a href="detail.html">Samba OG</a></b></td>
+                    <td>Adidas</td>
+                    <td><a href="profile.html">kickflipkid</a></td>
+                    <td align="center">55</td>
+                    <td><span class="metaText">01/12/2007</span></td>
+                </tr>
+                <tr class="dataRowAlt">
+                    <td>&nbsp;</td>
+                    <td><b><a href="detail.html">Sk8-Hi Reissue</a></b></td>
+                    <td>Vans</td>
+                    <td><a href="profile.html">hi_top_hana</a></td>
+                    <td align="center">29</td>
+                    <td><span class="metaText">01/11/2007</span></td>
+                </tr>
+            </table>
+
+            <div class="pagination">
+                &laquo; Prev
+                <span class="navSeparator"> | </span>
+                <b>Page 1 of 3</b>
+                <span class="navSeparator"> | </span>
+                <a href="#">Next &raquo;</a>
+            </div>
+
+        </td>
+    </tr>
+
+    <!-- FOOTER -->
+    <tr>
+        <td class="footer">
+            &copy; 2007 Zava Social. All rights reserved.<br>
+            <a href="#" class="footerLink">Contact Us</a>
+            <span class="navSeparator"> | </span>
+            <a href="#" class="footerLink">Terms of Use</a>
+            <span class="navSeparator"> | </span>
+            <a href="#" class="footerLink">Privacy Policy</a><br>
+            <span class="browserNote">Best viewed in Internet Explorer 6.0 or Firefox 1.5</span>
+        </td>
+    </tr>
+
+</table>
+
+</body>
+</html>

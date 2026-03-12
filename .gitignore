@@ -1,0 +1,25 @@
+# Java
+target/
+*.class
+*.jar
+!.github/skills/**/*.jar
+*.war
+*.ear
+.idea/
+*.iml
+.settings/
+.classpath
+.project
+
+# Docker
+docker-compose.override.yml
+
+# Sibling repos (cloned for docker-compose)
+ZavaSocialWorker/
+
+# General
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
