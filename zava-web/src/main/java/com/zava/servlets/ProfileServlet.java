@@ -3,10 +3,11 @@ package com.zava.servlets;
 import java.io.IOException;
 import java.util.List;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import com.zava.beans.ShoePost;
 import com.zava.beans.UserProfile;
@@ -33,6 +34,7 @@ import com.zava.service.ZavaServiceClient;
  * @version 1.0
  * @since 2007-06-15
  */
+@WebServlet(name = "ProfileServlet", urlPatterns = {"/profile"})
 public class ProfileServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
