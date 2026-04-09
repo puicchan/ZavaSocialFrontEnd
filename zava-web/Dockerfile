@@ -1,17 +1,14 @@
 # =============================================================================
-# Zava Social — Java Frontend (JSP/Servlets on Tomcat)
+# Zava Social — Java Frontend (JSP/Servlets on Spring Boot 3.4 / Tomcat 10.x)
 # =============================================================================
-# Multi-stage build: Maven compile → Tomcat runtime
-# Java 8 runtime is fully compatible with Java 6-era source code.
-#
-# NOTE: This Dockerfile expects pom.xml and src/ to exist in zava-web/.
-# Shuri is building those in parallel — until then, the build stage will fail.
+# Multi-stage build: Maven + Java 21 compile → Tomcat 10.x runtime
+# Migrated from Java 1.6 / Tomcat 8.5 to Java 21 / Jakarta EE 10 (Tomcat 10.1)
 # =============================================================================
 
 # ---------------------------------------------------------------------------
-# Stage 1: Build with Maven
+# Stage 1: Build with Maven + Java 21
 # ---------------------------------------------------------------------------
-FROM maven:3.8-eclipse-temurin-8 AS build
+FROM maven:3.9-eclipse-temurin-21 AS build
 
 WORKDIR /app
 
@@ -24,9 +21,9 @@ COPY src/ src/
 RUN mvn clean package -DskipTests -B
 
 # ---------------------------------------------------------------------------
-# Stage 2: Runtime — Tomcat 8.5 (supports Servlet 3.1, runs Java 6-era code)
+# Stage 2: Runtime — Tomcat 10.1 (Servlet 6.0 / Jakarta EE 10 / Java 21)
 # ---------------------------------------------------------------------------
-FROM tomcat:8.5-jre8
+FROM tomcat:10.1-jre21
 
 # Remove default Tomcat webapps
 RUN rm -rf /usr/local/tomcat/webapps/*
